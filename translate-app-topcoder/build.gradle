@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+}
+
+
+group 'dev.challenges'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '3.8.0'
+    implementation platform('com.google.cloud:libraries-bom:19.0.0')
+    implementation 'com.google.cloud:google-cloud-translate'
+
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'dev.challenges.translateapp.TranslateApplication'
+        )
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

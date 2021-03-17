@@ -1,0 +1,3 @@
+rootProject.name = 'dev-challenges'
+include 'translate-app-topcoder'
+
