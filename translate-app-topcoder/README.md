@@ -6,6 +6,7 @@
 
 * JDK 11
 * GCP service account key
+* Gradle 6+
 
 
 # Steps to Use
